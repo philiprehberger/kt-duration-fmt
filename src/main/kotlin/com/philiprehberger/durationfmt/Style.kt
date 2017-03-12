@@ -7,7 +7,7 @@ package com.philiprehberger.durationfmt
  * - [SHORT]: Abbreviated units separated by spaces, e.g. `"2h 30m"`
  * - [NARROW]: Abbreviated units with no separator, e.g. `"2h30m"`
  */
-enum class Style {
+public enum class Style {
     /** Full word units: "2 hours, 30 minutes" */
     LONG,
     /** Abbreviated units with space separator: "2h 30m" */

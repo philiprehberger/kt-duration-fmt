@@ -24,7 +24,7 @@ import kotlin.time.Duration.Companion.seconds
  * @param style the output style (default: [Style.LONG])
  * @return a human-readable duration string, or `"0 milliseconds"` / `"0ms"` for zero duration
  */
-fun Duration.humanize(maxUnits: Int = 2, style: Style = Style.LONG): String {
+public fun Duration.humanize(maxUnits: Int = 2, style: Style = Style.LONG): String {
     if (this == Duration.ZERO) {
         return when (style) {
             Style.LONG -> "0 milliseconds"
