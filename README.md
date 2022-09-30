@@ -11,7 +11,7 @@ Human-readable duration formatting and parsing for Kotlin.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("com.philiprehberger:duration-fmt:0.1.4")
+implementation("com.philiprehberger:duration-fmt:0.2.0")
 ```
 
 ### Maven
@@ -20,7 +20,7 @@ implementation("com.philiprehberger:duration-fmt:0.1.4")
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>duration-fmt</artifactId>
-    <version>0.1.4</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -47,6 +47,21 @@ parseDuration("1 day, 3 hours")   // 1.days + 3.hours
 parseDuration("500ms")            // 500.milliseconds
 ```
 
+### Components
+
+```kotlin
+import kotlin.time.Duration.Companion.days
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.milliseconds
+
+val c = (1.days + 2.hours + 3.minutes + 4.seconds + 500.milliseconds).components()
+c.days    // 1
+c.hours   // 2
+c.minutes // 3
+c.seconds // 4
+c.millis  // 500
+```
+
 ### Relative Time
 
 ```kotlin
@@ -63,6 +78,7 @@ import kotlin.time.Duration.Companion.seconds
 |-----------------|-------------|
 | `Duration.humanize(maxUnits, style)` | Format duration as human-readable string |
 | `parseDuration(input)` | Parse human-readable string to Duration |
+| `Duration.components()` | Decompose into `DurationComponents` (days, hours, minutes, seconds, millis) |
 | `Duration.timeAgo()` | Format as relative past time |
 | `Duration.fromNow()` | Format as relative future time |
 | `Style.LONG` | Full words: "2 hours, 30 minutes" |

@@ -127,4 +127,51 @@ class DurationFmtTest {
         assertEquals("1 second ago", 1.seconds.timeAgo())
         assertEquals("1 minute ago", 1.minutes.timeAgo())
     }
+
+    @Test
+    fun `components full breakdown`() {
+        val c = (1.days + 2.hours + 3.minutes + 4.seconds + 500.milliseconds).components()
+        assertEquals(1L, c.days)
+        assertEquals(2, c.hours)
+        assertEquals(3, c.minutes)
+        assertEquals(4, c.seconds)
+        assertEquals(500, c.millis)
+    }
+
+    @Test
+    fun `components zero duration`() {
+        val c = 0.seconds.components()
+        assertEquals(0L, c.days)
+        assertEquals(0, c.hours)
+        assertEquals(0, c.minutes)
+        assertEquals(0, c.seconds)
+        assertEquals(0, c.millis)
+    }
+
+    @Test
+    fun `components only millis`() {
+        val c = 750.milliseconds.components()
+        assertEquals(0L, c.days)
+        assertEquals(0, c.hours)
+        assertEquals(0, c.minutes)
+        assertEquals(0, c.seconds)
+        assertEquals(750, c.millis)
+    }
+
+    @Test
+    fun `components negative duration uses absolute value`() {
+        val c = (-(2.hours + 30.minutes)).components()
+        assertEquals(0L, c.days)
+        assertEquals(2, c.hours)
+        assertEquals(30, c.minutes)
+        assertEquals(0, c.seconds)
+        assertEquals(0, c.millis)
+    }
+
+    @Test
+    fun `components data class equality`() {
+        val a = (1.hours + 30.minutes).components()
+        val b = (1.hours + 30.minutes).components()
+        assertEquals(a, b)
+    }
 }
