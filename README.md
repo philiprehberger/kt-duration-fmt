@@ -1,6 +1,6 @@
 # kt-duration-fmt
 
-[![CI](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/duration-fmt)](https://central.sonatype.com/artifact/com.philiprehberger/duration-fmt)
 
 Human-readable duration formatting and parsing for Kotlin.
