@@ -28,7 +28,7 @@ import kotlin.time.Duration.Companion.seconds
  * @return the parsed [Duration]
  * @throws IllegalArgumentException if the input cannot be parsed
  */
-fun parseDuration(input: String): Duration {
+public fun parseDuration(input: String): Duration {
     val trimmed = input.trim()
     require(trimmed.isNotEmpty()) { "Duration string must not be empty" }
 

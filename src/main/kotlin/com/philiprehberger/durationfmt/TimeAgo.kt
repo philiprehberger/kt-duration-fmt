@@ -17,7 +17,7 @@ import kotlin.time.Duration.Companion.seconds
  *
  * @return a human-readable "X ago" string
  */
-fun Duration.timeAgo(): String {
+public fun Duration.timeAgo(): String {
     val ms = this.inWholeMilliseconds
     if (ms < 0) return this.fromNow()
 
@@ -34,7 +34,7 @@ fun Duration.timeAgo(): String {
  *
  * @return a human-readable "in X" string
  */
-fun Duration.fromNow(): String {
+public fun Duration.fromNow(): String {
     val ms = kotlin.math.abs(this.inWholeMilliseconds)
     return "in ${formatRelative(ms)}"
 }
