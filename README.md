@@ -1,6 +1,6 @@
 # duration-fmt
 
-[![CI](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml)
+[![Tests](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-duration-fmt/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/duration-fmt)](https://central.sonatype.com/artifact/com.philiprehberger/duration-fmt)
 [![License](https://img.shields.io/github/license/philiprehberger/kt-duration-fmt)](LICENSE)
 
@@ -11,17 +11,7 @@ Human-readable duration formatting and parsing for Kotlin.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-dependencies {
-    implementation("com.philiprehberger:duration-fmt:0.1.3")
-}
-```
-
-### Gradle (Groovy)
-
-```groovy
-dependencies {
-    implementation 'com.philiprehberger:duration-fmt:0.1.0'
-}
+implementation("com.philiprehberger:duration-fmt:0.1.3")
 ```
 
 ### Maven
