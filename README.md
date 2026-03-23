@@ -11,7 +11,7 @@ Human-readable duration formatting and parsing for Kotlin.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("com.philiprehberger:duration-fmt:0.1.3")
+implementation("com.philiprehberger:duration-fmt:0.1.4")
 ```
 
 ### Maven
@@ -20,7 +20,7 @@ implementation("com.philiprehberger:duration-fmt:0.1.3")
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>duration-fmt</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.4</version>
 </dependency>
 ```
 
