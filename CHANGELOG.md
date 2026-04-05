@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 (2026-04-05)
+
+- Add `Duration.components()` extension returning a `DurationComponents` data class with days, hours, minutes, seconds, and millis fields
+
 ## 0.1.5 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
